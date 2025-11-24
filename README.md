@@ -72,7 +72,7 @@ Projeto backend em desenvolvimento, usando:
 ## 🎓 Formação
 
 - **Engenharia de Software – Estácio** (5º período)  
-- **Técnico em Manutenção Automotiva**  
+- **Técnico em Manutenção Automotiva IETAAM**  
 - **Eletricidade básica – SENAI**  
 - Cursos complementares em:
   - Java  

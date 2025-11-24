@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Giovani da Silva Araújo – Portfólio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Portfólio de Giovani da Silva Araújo – Técnico em manutenção automotiva em transição para Engenharia de Software.">
+
+  <style>
+    :root {
+      --bg: #0f172a;
+      --bg-soft: #020617;
+      --card: #020617;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --border: #1f2937;
+      --accent: #38bdf8;
+      --accent-soft: rgba(56, 189, 248, 0.1);
+      --radius-lg: 16px;
+      --radius-pill: 999px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top left, #1e293b, #020617);
+      color: var(--text);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* LAYOUT GERAL */
+    .page {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 1.5rem 1.25rem 3rem;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(16px);
+      background: linear-gradient(to bottom, rgba(15, 23, 42, 0.96), rgba(15, 23, 42, 0.88));
+      border-bottom: 1px solid rgba(30, 64, 175, 0.6);
+    }
+
+    .topbar {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0.8rem 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      font-size: 0.85rem;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .avatar {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #38bdf8, #6366f1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.9rem;
+      color: #0b1120;
+      box-shadow: 0 12px 30px rgba(56, 189, 248, 0.45);
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand-name {
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      font-size: 0.9rem;
+    }
+
+    .brand-role {
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+
+    nav {
+      display: flex;
+      gap: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.09em;
+      font-size: 0.75rem;
+      color: var(--muted);
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      padding: 0.25rem 0.7rem;
+      border-radius: var(--radius-pill);
+      color: inherit;
+      text-decoration: none;
+      border: 1px solid transparent;
+    }
+
+    nav a:hover {
+      border-color: rgba(148, 163, 184, 0.6);
+      color: var(--text);
+      background: rgba(15, 23, 42, 0.9);
+    }
+
+    @media (max-width: 720px) {
+      .topbar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    /* HERO */
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 2fr) minmax(0, 1.4fr);
+      gap: 1.8rem;
+      margin-top: 2rem;
+      align-items: center;
+    }
+
+    @media (max-width: 880px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      padding: 0.25rem 0.75rem;
+      border-radius: var(--radius-pill);
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-size: 0.78rem;
+      font-weight: 500;
+      margin-bottom: 0.6rem;
+    }
+
+    .badge-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #22c55e;
+    }
+
+    .hero-title {
+      font-size: clamp(1.9rem, 2.4vw + 1rem, 2.7rem);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      margin-bottom: 0.7rem;
+    }
+
+    .hero-title span {
+      color: var(--accent);
+    }
+
+    .hero-subtitle {
+      font-size: 0.96rem;
+      color: var(--muted);
+      max-width: 640px;
+      margin-bottom: 0.8rem;
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+      margin-bottom: 1rem;
+    }
+
+    .chip {
+      font-size: 0.78rem;
+      padding: 0.3rem 0.8rem;
+      border-radius: var(--radius-pill);
+      background: #020617;
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      color: #e5e7eb;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      margin-bottom: 0.9rem;
+    }
+
+    .btn {
+      padding: 0.7rem 1.3rem;
+      border-radius: var(--radius-pill);
+      border: 1px solid transparent;
+      font-size: 0.9rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      cursor: pointer;
+      text-decoration: none;
+      background: transparent;
+      color: var(--text);
+      transition: background 0.16s ease, border-color 0.16s ease, transform 0.05s ease;
+      white-space: nowrap;
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+    }
+
+    .btn-primary {
+      background: #e5e7eb;
+      color: #020617;
+      font-weight: 600;
+      border-color: #e5e7eb;
+    }
+
+    .btn-primary:hover {
+      background: #f9fafb;
+    }
+
+    .btn-outline {
+      border-color: rgba(148, 163, 184, 0.7);
+      color: var(--text);
+      background: rgba(15, 23, 42, 0.7);
+    }
+
+    .btn-outline:hover {
+      background: #020617;
+    }
+
+    .hero-meta {
+      font-size: 0.85rem;
+      color: var(--muted);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.2rem;
+    }
+
+    .hero-meta span {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+
+    .hero-card {
+      background: var(--card);
+      border-radius: var(--radius-lg);
+      padding: 1.4rem 1.5rem;
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.5);
+      font-size: 0.9rem;
+    }
+
+    .hero-card-title {
+      font-size: 0.92rem;
+      font-weight: 600;
+      margin-bottom: 0.7rem;
+    }
+
+    .stat-row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 0.4rem;
+      color: #cbd5f5;
+    }
+
+    .stat-label {
+      color: var(--muted);
+    }
+
+    .quote {
+      margin-top: 0.7rem;
+      font-size: 0.86rem;
+      color: var(--muted);
+      border-left: 2px solid rgba(148, 163, 184, 0.7);
+      padding-left: 0.7rem;
+    }
+
+    /* SEÇÕES */
+    main {
+      margin-top: 2.2rem;
+    }
+
+    section {
+      margin-bottom: 2.3rem;
+    }
+
+    .section-header {
+      margin-bottom: 1rem;
+    }
+
+    .section-title {
+      font-size: 1.05rem;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .section-title .icon {
+      font-size: 1.2rem;
+    }
+
+    .section-subtitle {
+      font-size: 0.9rem;
+      color: var(--muted);
+      max-width: 680px;
+      margin-top: 0.35rem;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.3rem;
+    }
+
+    @media (max-width: 880px) {
+      .grid-2 {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .card {
+      background: var(--bg-soft);
+      border-radius: var(--radius-lg);
+      padding: 1.2rem 1.3rem;
+      border: 1px solid rgba(148, 163, 184, 0.4);
+    }
+
+    .card h3 {
+      font-size: 0.96rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .card small {
+      font-size: 0.78rem;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.09em;
+      display: inline-block;
+      margin-bottom: 0.7rem;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    .list-bullets li {
+      position: relative;
+      padding-left: 1.1rem;
+      margin-bottom: 0.4rem;
+      font-size: 0.9rem;
+      color: #e5e7eb;
+    }
+
+    .list-bullets li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--accent);
+    }
+
+    .skills-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+      margin-top: 0.5rem;
+    }
+
+    .skills-tags span {
+      font-size: 0.78rem;
+      padding: 0.22rem 0.65rem;
+      border-radius: var(--radius-pill);
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      color: #e5e7eb;
+    }
+
+    /* PROJETOS */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.1rem;
+    }
+
+    @media (max-width: 880px) {
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .project-card {
+      background: var(--bg-soft);
+      border-radius: var(--radius-lg);
+      padding: 1.1rem 1.2rem;
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      font-size: 0.9rem;
+    }
+
+    .project-title {
+      font-weight: 600;
+      margin-bottom: 0.15rem;
+    }
+
+    .project-meta {
+      font-size: 0.76rem;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.09em;
+      margin-bottom: 0.4rem;
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+      margin-top: 0.5rem;
+    }
+
+    .pill {
+      font-size: 0.78rem;
+      padding: 0.22rem 0.65rem;
+      border-radius: var(--radius-pill);
+      background: rgba(56, 189, 248, 0.12);
+      color: #e0f2fe;
+    }
+
+    /* TIMELINE */
+    .timeline {
+      border-left: 1px solid rgba(148, 163, 184, 0.7);
+      padding-left: 1.1rem;
+      margin-top: 0.3rem;
+    }
+
+    .timeline-item {
+      position: relative;
+      padding-bottom: 1rem;
+    }
+
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      left: -0.6rem;
+      top: 0.4rem;
+      width: 0.5rem;
+      height: 0.5rem;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 0 4px rgba(56, 189, 248, 0.18);
+    }
+
+    .timeline-title {
+      font-size: 0.92rem;
+      font-weight: 600;
+    }
+
+    .timeline-meta {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-bottom: 0.4rem;
+    }
+
+    .columns-2 {
+      columns: 2;
+      column-gap: 2rem;
+    }
+
+    @media (max-width: 720px) {
+      .columns-2 {
+        columns: 1;
+      }
+    }
+
+    .recruiter-summary {
+      font-size: 0.9rem;
+      color: #e5e7eb;
+    }
+
+    /* FOOTER */
+    footer {
+      margin-top: 2.3rem;
+      padding-top: 1.2rem;
+      border-top: 1px solid rgba(30, 64, 175, 0.6);
+      font-size: 0.85rem;
+      color: var(--muted);
+      display: flex;
+      justify-content: space-between;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="topbar">
+      <div class="brand">
+        <div class="avatar">GA</div>
+        <div class="brand-text">
+          <span class="brand-name">Giovani da Silva Araújo</span>
+          <span class="brand-role">Transição para Engenharia de Software</span>
+        </div>
+      </div>
+      <nav>
+        <a href="#sobre">Sobre</a>
+        <a href="#skills">Skills</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#experiencia">Experiência</a>
+        <a href="#contato">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page">
+    <!-- HERO -->
+    <section class="hero">
+      <div>
+        <div class="badge">
+          <span class="badge-dot"></span>
+          Em transição da manutenção automotiva para o backend
+        </div>
+
+        <h1 class="hero-title">
+          Engenheiro de Software em formação com <span>20+ anos</span> de experiência em manutenção automotiva.
+        </h1>
+
+        <p class="hero-subtitle">
+          Técnico em manutenção automotiva há mais de 20 anos e estudante de Engenharia de Software (5º período).
+          Uno experiência prática em diagnóstico, processos e gestão com desenvolvimento de software para criar
+          soluções que resolvem problemas reais de operação e manutenção.
+        </p>
+
+        <div class="chips">
+          <span class="chip">Backend</span>
+          <span class="chip">Go / Python</span>
+          <span class="chip">APIs REST</span>
+          <span class="chip">PostgreSQL</span>
+          <span class="chip">Gestão de Manutenção</span>
+        </div>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="https://www.linkedin.com/in/giobom2" target="_blank" rel="noreferrer">
+            Ver perfil no LinkedIn ↗
+          </a>
+          <a class="btn btn-outline" href="#projetos">
+            Ver projetos de tecnologia
+          </a>
+        </div>
+
+        <div class="hero-meta">
+          <span>📍 Betim/MG – Brasil</span>
+          <span>🎓 Engenharia de Software – Estácio (5º período)</span>
+          <span>📧 <a href="mailto:giobom2@gmail.com">giobom2@gmail.com</a></span>
+        </div>
+      </div>
+
+      <aside class="hero-card">
+        <div class="hero-card-title">Snapshot profissional</div>
+        <div class="stat-row">
+          <span class="stat-label">Experiência em manutenção</span>
+          <span>20+ anos</span>
+        </div>
+        <div class="stat-row">
+          <span class="stat-label">Foco atual</span>
+          <span>Backend / Web</span>
+        </div>
+        <div class="stat-row">
+          <span class="stat-label">Atuação</span>
+          <span>SFO Centro Automotivo</span>
+        </div>
+        <p class="quote">
+          “Minha meta é transformar tudo o que aprendi na prática — diagnósticos, processos e organização —
+          em software que simplifica a vida de pessoas e empresas.”
+        </p>
+      </aside>
+    </section>
+
+    <!-- SOBRE -->
+    <section id="sobre">
+      <div class="section-header">
+        <h2 class="section-title">
+          <span class="icon">🎯</span>
+          Sobre mim
+        </h2>
+        <p class="section-subtitle">
+          Profissional em transição da área automotiva para a tecnologia, aproveitando a bagagem prática em manutenção,
+          diagnóstico e gestão de processos para construir soluções de software robustas e focadas em resultado.
+        </p>
+      </div>
+
+      <div class="grid-2">
+        <div class="card">
+          <h3>Resumo</h3>
+          <ul class="list-bullets">
+            <li>Mais de 20 anos de experiência em manutenção e diagnóstico automotivo.</li>
+            <li>Estudante de Engenharia de Software (5º período), com foco em backend e desenvolvimento web.</li>
+            <li>Perfil autodidata, resiliente e orientado a entregar soluções práticas e funcionais.</li>
+            <li>Interesse especial em sistemas de gestão, automação de processos e aplicações ligadas à manutenção.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Diferenciais na transição</h3>
+          <ul class="list-bullets">
+            <li>Experiência intensa com problemas reais, urgentes e complexos.</li>
+            <li>Visão de processos, fluxo de trabalho e impacto direto em negócios.</li>
+            <li>Comunicação clara com clientes e equipes multidisciplinares.</li>
+            <li>Disciplina, responsabilidade e foco em melhoria contínua (Lean, Kaizen, 5S).</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+      <div class="section-header">
+        <h2 class="section-title">
+          <span class="icon">💻</span>
+          Skills técnicas e transferíveis
+        </h2>
+        <p class="section-subtitle">
+          Minha base combina programação, desenvolvimento web e banco de dados com habilidades construídas na prática
+          da manutenção — diagnóstico, leitura de esquemas e organização de processos.
+        </p>
+      </div>
+
+      <div class="grid-2">
+        <div class="card">
+          <h3>Stack de tecnologia</h3>
+          <small>Desenvolvimento de software</small>
+          <ul class="list-bullets">
+            <li><strong>Linguagens:</strong> Go (Golang), Python, JavaScript, Java.</li>
+            <li><strong>Web:</strong> HTML5, CSS3, APIs REST, arquitetura básica de sistemas.</li>
+            <li><strong>Banco de Dados:</strong> PostgreSQL e SQLite.</li>
+            <li><strong>Ferramentas:</strong> Git &amp; GitHub.</li>
+          </ul>
+          <div class="skills-tags">
+            <span>Go</span>
+            <span>Python</span>
+            <span>JavaScript</span>
+            <span>PostgreSQL</span>
+            <span>APIs REST</span>
+            <span>Git &amp; GitHub</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Habilidades transferíveis</h3>
+          <small>Da manutenção para o software</small>
+          <ul class="list-bullets">
+            <li>Diagnóstico de problemas complexos (debugging na prática).</li>
+            <li>Leitura de esquemas elétricos (arquitetura de sistemas e fluxos).</li>
+            <li>Gestão de pátio, estoque e prioridades (gestão de tarefas e processos).</li>
+            <li>Atendimento ao cliente e comunicação clara com não técnicos.</li>
+            <li>Vivência com tecnologia embarcada, sensores e módulos (base para IoT).</li>
+          </ul>
+          <div class="skills-tags">
+            <span>Diagnóstico</span>
+            <span>Gestão de processos</span>
+            <span>Atendimento</span>
+            <span>IoT / Sensores</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJETOS -->
+    <section id="projetos">
+      <div class="section-header">
+        <h2 class="section-title">
+          <span class="icon">🚀</span>
+          Projetos de tecnologia
+        </h2>
+        <p class="section-subtitle">
+          Projetos que conectam minha experiência em manutenção com desenvolvimento de software, mostrando minha lógica,
+          organização de código e foco em resolver problemas reais.
+        </p>
+      </div>
+
+      <div class="projects-grid">
+        <article class="project-card">
+          <div class="project-title">Sistema de Gestão de Oficina – Go + PostgreSQL</div>
+          <div class="project-meta">Backend • APIs • Banco de dados</div>
+          <ul class="list-bullets">
+            <li>Cadastro de clientes, veículos, serviços e ordens de serviço.</li>
+            <li>Controle de pátio e status dos veículos em atendimento.</li>
+            <li>Gestão de estoque de peças, entradas e saídas.</li>
+            <li>API REST preparada para integrar com futuras interfaces web/mobile.</li>
+            <li>Modelado a partir da rotina real de oficina.</li>
+          </ul>
+          <div class="pill-row">
+            <span class="pill">Go</span>
+            <span class="pill">PostgreSQL</span>
+            <span class="pill">API REST</span>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-title">App de Checklist Automotivo (PWA)</div>
+          <div class="project-meta">Front-end • Produtividade</div>
+          <ul class="list-bullets">
+            <li>Checklist de entrada para veículos (segurança, elétrica, mecânica).</li>
+            <li>Geração de resumo compartilhável para o cliente.</li>
+            <li>Funciona no navegador e pode ser “instalado” como app.</li>
+            <li>Ajuda a padronizar e organizar a avaliação inicial.</li>
+          </ul>
+          <div class="pill-row">
+            <span class="pill">JavaScript</span>
+            <span class="pill">HTML</span>
+            <span class="pill">CSS</span>
+            <span class="pill">PWA</span>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-title">Dashboard de Diagnósticos – Python + Flask</div>
+          <div class="project-meta">Backend • Visualização de dados</div>
+          <ul class="list-bullets">
+            <li>Simulação de dados de sensores e módulos automotivos.</li>
+            <li>Dashboard web com gráficos para visualização de falhas.</li>
+            <li>Foco em telemetria e análise de tendências de problemas.</li>
+          </ul>
+          <div class="pill-row">
+            <span class="pill">Python</span>
+            <span class="pill">Flask</span>
+            <span class="pill">Dashboards</span>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-title">CRUD de Usuários – Go + PostgreSQL</div>
+          <div class="project-meta">Fundamentos de backend</div>
+          <ul class="list-bullets">
+            <li>Criação, listagem, edição e remoção de usuários.</li>
+            <li>Testes de conexão com banco de dados.</li>
+            <li>Hash de senha e boas práticas básicas de segurança.</li>
+          </ul>
+          <div class="pill-row">
+            <span class="pill">Go</span>
+            <span class="pill">PostgreSQL</span>
+            <span class="pill">REST</span>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-title">Website VIN CAR SERVICE</div>
+          <div class="project-meta">Educação para clientes • Conteúdo técnico</div>
+          <ul class="list-bullets">
+            <li>Site com cerca de 10 páginas explicando serviços e manutenção preventiva.</li>
+            <li>Linguagem simples para leigos entenderem problemas e soluções.</li>
+            <li>Seções para agendamento, contato e blog sobre manutenção.</li>
+          </ul>
+          <div class="pill-row">
+            <span class="pill">HTML</span>
+            <span class="pill">CSS</span>
+            <span class="pill">UX para leigos</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- EXPERIÊNCIA -->
+    <section id="experiencia">
+      <div class="section-header">
+        <h2 class="section-title">
+          <span class="icon">🛠️</span>
+          Experiência profissional
+        </h2>
+        <p class="section-subtitle">
+          Minha trajetória na manutenção automotiva trouxe base forte em responsabilidade, urgência, segurança e análise
+          precisa de problemas — fundamentos que agora levo para o desenvolvimento de software.
+        </p>
+      </div>
+
+      <div class="grid-2">
+        <div class="card">
+          <h3>Experiência em manutenção</h3>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-title">Técnico em Manutenção Automotiva – SFO Centro Automotivo</div>
+              <div class="timeline-meta">Betim/MG • Atuação atual</div>
+              <ul class="list-bullets">
+                <li>Diagnóstico elétrico, eletrônico e mecânico de veículos.</li>
+                <li>Uso de scanner automotivo e interpretação de códigos de falha.</li>
+                <li>Leitura de diagramas elétricos e esquemas de módulos.</li>
+                <li>Gestão de pátio, definição de prioridades e organização do fluxo.</li>
+                <li>Atendimento consultivo ao cliente, explicando problemas em linguagem simples.</li>
+              </ul>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-title">Eletricista e Mecânico Automotivo</div>
+              <div class="timeline-meta">Experiência em diferentes oficinas</div>
+              <ul class="list-bullets">
+                <li>Atuação com injeção eletrônica, ABS, sensores e módulos diversos.</li>
+                <li>Resolução de falhas críticas com foco em segurança e confiabilidade.</li>
+                <li>Apoio a outros técnicos, compartilhando conhecimento e boas práticas.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Formação e cursos</h3>
+          <ul class="list-bullets">
+            <li><strong>Engenharia de Software – Estácio</strong><br>5º período • Conclusão prevista: 2027.</li>
+            <li><strong>Técnico em Manutenção Automotiva – SENAI</strong><br>Ênfase em elétrica, eletrônica e diagnóstico.</li>
+          </ul>
+
+          <h3 style="margin-top: 1rem; font-size: 0.92rem;">Cursos e certificações</h3>
+          <div class="columns-2">
+            <ul class="list-bullets">
+              <li>Python Essencial.</li>
+              <li>Go para iniciantes.</li>
+              <li>Git &amp; GitHub.</li>
+              <li>HTML &amp; CSS.</li>
+              <li>Lógica de Programação.</li>
+              <li>Eletricidade automotiva – SENAI.</li>
+              <li>Injeção eletrônica.</li>
+              <li>Conceitos de computação em nuvem (AWS introdutório).</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOFT SKILLS -->
+    <section id="soft-skills">
+      <div class="section-header">
+        <h2 class="section-title">
+          <span class="icon">🌱</span>
+          Soft skills
+        </h2>
+        <p class="section-subtitle">
+          Além da técnica, carrego uma base forte de disciplina, foco em resultado e capacidade de lidar com pressão —
+          fundamentais tanto em manutenção quanto em tecnologia.
+        </p>
+      </div>
+
+      <div class="grid-2">
+        <div class="card">
+          <ul class="list-bullets">
+            <li>Resolução de problemas e pensamento analítico.</li>
+            <li>Comunicação clara com perfis técnicos e não técnicos.</li>
+            <li>Organização, responsabilidade e postura profissional.</li>
+            <li>Trabalho em equipe e colaboração.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <ul class="list-bullets">
+            <li>Adaptabilidade e aprendizado contínuo.</li>
+            <li>Inteligência emocional e resiliência.</li>
+            <li>Foco em melhoria contínua (Lean, Kaizen, 5S).</li>
+            <li>Visão prática de negócio e impacto no cliente final.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section id="contato">
+      <div class="section-header">
+        <h2 class="section-title">
+          <span class="icon">📬</span>
+          Contato
+        </h2>
+        <p class="section-subtitle">
+          Aberto a oportunidades de estágio, posições júnior e projetos em desenvolvimento backend, APIs, manutenção
+          de sistemas e soluções ligadas à operação e manutenção.
+        </p>
+      </div>
+
+      <div class="grid-2">
+        <div class="card">
+          <h3>Como falar comigo</h3>
+          <ul class="list-bullets">
+            <li>E-mail: <a href="mailto:giobom2@gmail.com">giobom2@gmail.com</a></li>
+            <li>LinkedIn: <a href="https://www.linkedin.com/in/giobom2" target="_blank" rel="noreferrer">/in/giobom2</a></li>
+            <li>Cidade: Betim/MG – Brasil</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Resumo para recrutadores</h3>
+          <p class="recruiter-summary">
+            Técnico em manutenção automotiva com mais de 20 anos de experiência e estudante de Engenharia de Software
+            (5º período), em transição para a área de TI com foco em backend, APIs e sistemas de gestão. Busco
+            oportunidade para aplicar minha capacidade analítica, disciplina e vivência em problemas reais no
+            desenvolvimento de software.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div>© <span id="year"></span> Giovani da Silva Araújo – Portfólio em transição para tecnologia.</div>
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/giobom2" target="_blank" rel="noreferrer">LinkedIn</a>
+        <span>•</span>
+        <a href="#projetos">Projetos</a>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

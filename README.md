@@ -1,111 +1,108 @@
-# 🚀 Portfólio – Giovani da Silva Araújo  
-### Técnico em Manutenção Automotiva • Estudante de Engenharia de Software • Desenvolvedor Backend
+# 🚀 Portfólio – Giovani da Silva Araújo
+### Desenvolvedor de Software & Especialista em Diagnóstico Automotivo
+#### *Unindo 25+ anos de expertise mecânica com Engenharia de Dados, IoT e Nuvem.*
 
 Este é o repositório do meu portfólio profissional publicado em:  
 👉 **https://giobom.github.io**
 
-Sou técnico em manutenção automotiva com mais de **20 anos de experiência**, atualmente em **transição para a Engenharia de Software**, cursando o **5º período**. Trago comigo sólida experiência em diagnóstico, elétrica, eletrônica, gestão de processos e resolução prática de problemas — habilidades que hoje aplico no desenvolvimento backend, APIs e sistemas de gestão.
+Sou um **Domain Expert (Especialista de Domínio)** na indústria automotiva evoluindo para a Engenharia de Software. Diferente de desenvolvedores generalistas, eu entendo profundamente a **regra de negócio** de motores, sensores e sistemas de gestão crítica.
+
+Trago uma bagagem de **25 anos de chão de oficina**, diagnosticando falhas complexas que hoje traduzo em soluções de software robustas, utilizando **Java, Python, Go e AWS**.
 
 ---
 
-## 🧑‍💻 Sobre o portfólio
+## 🧑‍💻 Sobre o Profissional
 
-Este site foi criado para apresentar:
+Meu foco não é apenas escrever código, mas criar soluções que funcionam no mundo real da mobilidade. Este portfólio demonstra como aplico:
 
-- Minha trajetória profissional
-- Minhas habilidades técnicas (Java, Go, Python, HTML, CSS, SQL, APIs REST)
-- Projetos em desenvolvimento
-- Experiência na área automotiva
-- Contato profissional para vagas de estágio e posições júnior
-
-O design é totalmente **responsivo**, moderno e feito em **HTML + CSS puro**.
+- **Lógica de Diagnóstico:** O mesmo raciocínio analítico usado para identificar falhas em injeção eletrônica aplicado ao debugging e arquitetura de software.
+- **IoT e Telemetria:** Leitura de sensores e transformação de dados brutos em inteligência (Grafos/Neo4j).
+- **Gestão de Processos:** Aplicação de metodologias ágeis e organização (Kaizen/5S) no desenvolvimento de sistemas.
 
 ---
 
-## 🚀 Projetos em destaque
+## 🚀 Projetos em Destaque
 
-### **🔧 Sistema de Gestão de Mecânica – Java + PostgreSQL**
-Projeto backend em desenvolvimento, usando:
-- Java  
-- Spring Boot  
-- PostgreSQL  
-- API REST
-- CRUD de clientes, veículos e ordens de serviço
+Soluções desenvolvidas com foco em dores reais do setor automotivo:
 
----
-
-### **⚙️ Sistema de Oficina – Go + PostgreSQL**
-- API REST  
-- CRUD completo  
-- Controle de pátio e estoque  
-- Arquitetura simples, organizada e escalável  
+### **🔧 AutoManager ERP – Java + Spring Boot**
+Sistema de gestão robusto para centros automotivos, modelado com base na rotina real de oficina.
+- **Tech:** Java, Spring Boot, PostgreSQL, API REST.
+- **Diferencial:** Arquitetura preparada para lidar com fluxo de pátio complexo e gestão de peças críticas.
 
 ---
 
-### **📋 Checklist Automotivo – JavaScript (PWA)**
-- Checklist de entrada  
-- Salvamento local  
-- Resumo para o cliente  
-- Pode ser “instalado” no celular  
+### **📊 Módulo de Telemetria & IoT – Python + Flask**
+Dashboard para análise de dados de sensores simulados, focado em manutenção preditiva.
+- **Tech:** Python, Flask, Dashboards Interativos.
+- **Diferencial:** Visualização de tendências de falhas antes da quebra do componente.
 
 ---
 
-### **📊 Dashboard de Diagnósticos – Python + Flask**
-- Visualização de sensores simulados  
-- Telemetria básica  
-- Gráficos e leitura de tendências  
+### **⚙️ API de Gestão de Frotas – Go + PostgreSQL**
+Backend de alta performance para controle de ativos e manutenção.
+- **Tech:** Go (Golang), PostgreSQL, Docker.
+- **Diferencial:** Arquitetura escalável e leve, focada em performance.
 
 ---
 
-## 🛠️ Tecnologias e Ferramentas
-
-- **Backend:** Java, Go, Python  
-- **Frameworks:** Spring Boot, Flask  
-- **Banco de dados:** PostgreSQL, SQLite  
-- **Web:** HTML5, CSS3, JS  
-- **Git & GitHub**  
-- **DevOps básico**  
-- **APIs REST**
+### **📋 App de Inspeção Digital – JavaScript (PWA)**
+Checklist progressivo para entrada de veículos e laudos técnicos.
+- **Tech:** HTML5, CSS3, JavaScript Vanilla, PWA.
+- **Diferencial:** Funciona offline e padroniza a coleta de dados técnicos.
 
 ---
 
-## 🎓 Formação
+## 🛠️ Stack Tecnológico
 
-- **Engenharia de Software – Estácio** (5º período)  
-- **Técnico em Manutenção Automotiva IETAAM**  
-- **Eletricidade básica – SENAI**  
-- Cursos complementares em:
-  - Java  
-  - Go  
-  - Python  
-  - Git & GitHub  
-  - HTML & CSS  
-  - Lógica de Programação  
-  - Conceitos de nuvem (AWS intro)  
+Digitalizando a mecânica com ferramentas modernas:
+
+- **Linguagens:** Java, Go, Python, JavaScript
+- **Cloud & Infra:** AWS (Cloud Practitioner), Conceitos de Docker
+- **Dados:** PostgreSQL, SQLite, Neo4j (Grafos para sistemas complexos)
+- **Backend Frameworks:** Spring Boot, Flask
+- **Ferramentas:** Git, GitHub, Postman, VS Code
+- **Domínio Automotivo:** Diagnóstico Eletrônico, Scanner, Osciloscópio, Protocolos OBD-II
 
 ---
 
-## 📫 Contato
+## 🎓 Formação & Certificações
 
-- **E-mail:** giobom2@gmail.com  
-- **LinkedIn:** https://www.linkedin.com/in/giobom2  
-- **Localização:** Betim/MG – Brasil  
+### Acadêmico
+- **Engenharia de Software** – Estácio (5º período)
+- **Técnico em Manutenção Automotiva** – IETAAM
 
----
+### Certificações Tech (Destaques)
+- **AWS Cloud Practitioner** (Conhecimentos)
+- **Neo4j:** Análise de Dados com Grafos
+- **DIO Campus Expert:** Liderança e Soft Skills em Tech
+- **Desenvolvimento Backend:** Java, Go, Python
 
-## 📌 Deploy
-O site está hospedado via **GitHub Pages**, usando:  
-- Branch: `main`  
-- Pasta raiz: `/ (root)`
+### Certificações de Domínio (Elite Automotiva)
+- **Bosch:** Diagnóstico Avançado
+- **Tecnomotor:** Técnico Elite em Eletrônica
+- **ZF/Sachs:** Sistemas de Transmissão e Freios
 
 ---
 
 ## 💼 Objetivo Profissional
 
-Busco oportunidade como **estagiário ou desenvolvedor júnior**, aplicando minha experiência prática de mais de 20 anos em diagnóstico, resolução de problemas e processos, agora no desenvolvimento de software — especialmente em backend, APIs e sistemas de gestão.
+Busco oportunidades estratégicas onde meu background híbrido seja um diferencial competitivo. Tenho interesse em atuar como:
+
+- **Analista de Desenvolvimento / Backend**
+- **QA Automotivo / Validação de Software**
+- **Analista de Engenharia de Produto / P&D**
+- **Especialista em Telemetria e IoT**
 
 ---
 
-### ⭐ Se quiser ver o site online:
-👉 **https://giobom.github.io**
+## 📫 Contato
 
+- **LinkedIn:** [linkedin.com/in/giobom2](https://www.linkedin.com/in/giobom2)
+- **E-mail:** giobom2@gmail.com
+- **Localização:** Betim/MG – Brasil (Polo Automotivo Stellantis/FCA)
+
+---
+
+### ⭐ Acesse o Portfólio Online:
+👉 **https://giobom.github.io**
